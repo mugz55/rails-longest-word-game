@@ -1,2 +1,13 @@
-<h1>Games#score</h1>
-<p>Find me in app/views/games/score.html.erb</p>
+<div class="container pt-3">
+  <h1>Result</h1>
+  <p><%= @result %></p>
+  <% if @game_score %>
+    <p>Your score this round: <%= @game_score %></p>
+  <% else %>
+    <p>Your score this round: 0</p>
+  <% end %>
+  <p>Your cumulative score: <%= @session %>
+  <div>
+    <%= link_to "Play again", new_path %>
+  </div>
+</div>
